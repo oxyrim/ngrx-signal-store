@@ -15,7 +15,7 @@ export class TodosService {
   async addTodo(todo: Partial<Todo>): Promise<Todo> {
     await sleep(1000);
     return {
-      id: Math.floor(Math.random() * 50).toString(36),
+      id: (Math.floor(Math.random() * 51) + 10).toString(),
       ...todo
     } as Todo;
   }
